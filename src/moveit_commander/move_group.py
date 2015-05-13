@@ -122,6 +122,9 @@ class MoveGroupCommander(object):
         else:
             raise MoveItCommanderException("There is no end effector to get the pose of")
 
+    def set_max_velocity_scaling_factor(self, max_velocity_scaling_factor = 0.1):
+        self._g.set_max_velocity_scaling_factor(max_velocity_scaling_factor)
+
     def set_start_state_to_current_state(self):
         self._g.set_start_state_to_current_state()
 
